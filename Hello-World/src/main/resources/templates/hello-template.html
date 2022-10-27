@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<p th:text="'hello ' + ${name}"> hello! empty</p>
+<!-- 현재 ${name}이 부분이 name 변수로 치환됨. key가 "name"이고 value값이 name이기 때문
+이는 HelloController에서 model.addAttribute("name", name);에서 name라는 부분을 name 변수로 치환한다고 나타냈기 때문
+${} 표시는 Model에서 key 값이 중괄호 안에 있는 value를 꺼내는 것을 의미함
+-->
+</body>
+</html>

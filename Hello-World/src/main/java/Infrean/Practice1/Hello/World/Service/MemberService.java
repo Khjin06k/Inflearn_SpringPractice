@@ -9,7 +9,13 @@ import java.util.Optional;
 
 public class MemberService { //비즈니스에 가까운 용어를 사용함
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    //private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
+    //객체가 다른 것을 해결하기 위해서 객체를 가져오도록 함.
+
 
     /**
      * 회원 가입

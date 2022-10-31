@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th=http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}"> <!--모델 안의 member를 읽어드림. member는 리스트로 하여 member들을 모아둠 -->
+                <td th:text="${member.id}"></td> <!-- id와 name을 저장해 출력함. 리스트이기 때문에 등록을 여러번 할 경우 차례대로 등록되며, 출력됨 -->
+                <td th:text="${member.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

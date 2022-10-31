@@ -3,16 +3,20 @@ package Infrean.Practice1.Hello.World.Service;
 import Infrean.Practice1.Hello.World.domain.Member;
 import Infrean.Practice1.Hello.World.repository.MemberRepository;
 import Infrean.Practice1.Hello.World.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+//@Service
 public class MemberService { //비즈니스에 가까운 용어를 사용함
 
     //private final MemberRepository memberRepository = new MemoryMemberRepository();
     private final MemberRepository memberRepository;
-    public MemberService(MemberRepository memberRepository){
-        this.memberRepository = memberRepository;
+   //@Autowired
+    public MemberService(MemberRepository memberRepository){ // Repository를 가져와 사용이 가능해야 하기 때문에 스프링 빈 등록이 되어 있어야 함.
+        this.memberRepository = memberRepository; //MemberRepository는 MemoryMemberRepository가 구현체이기에 이 Repository에 추가함
     }
     //객체가 다른 것을 해결하기 위해서 객체를 가져오도록 함.
 

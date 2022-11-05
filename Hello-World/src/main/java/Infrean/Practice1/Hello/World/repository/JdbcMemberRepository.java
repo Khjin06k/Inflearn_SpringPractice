@@ -1,7 +1,6 @@
 package Infrean.Practice1.Hello.World.repository;
 
 import Infrean.Practice1.Hello.World.domain.Member;
-//import hello.hellospring.domain.Member;
 import org.springframework.jdbc.datasource.DataSourceUtils;
 
 import javax.sql.DataSource;
